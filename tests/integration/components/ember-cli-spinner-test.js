@@ -1,26 +1,25 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ember-cli-spinner', 'Integration | Component | ember cli spinner', {
-  integration: true
-});
+module('Integration | Component | ember cli spinner', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(2);
+  test('it renders', async function(assert) {
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    assert.expect(2);
+    
+    await render(hbs`{{ember-cli-spinner}}`);
+    assert.dom('*').hasText('');
 
-  this.render(hbs`{{ember-cli-spinner}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ember-cli-spinner}}
-      template block text
-    {{/ember-cli-spinner}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+    // Template block usage:
+    await render(hbs`
+      {{#ember-cli-spinner isShow=true}}
+        template block text
+      {{/ember-cli-spinner}}
+    `);
+    debugger;
+    assert.dom('*').hasText('template block text');
+  });
 });

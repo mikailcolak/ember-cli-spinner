@@ -1,7 +1,8 @@
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
+import Controller from '@ember/controller';
 
-export default Ember.Controller.extend({
-  spinner : Ember.inject.service(),
+export default Controller.extend({
+  spinner : service(),
   timer : 3000,
   types: [{
     id : "circles",
@@ -45,7 +46,7 @@ export default Ember.Controller.extend({
     showSpinner() {
       let spinner = this.get("spinner");
       let timer = this.get("timer");
-      let type = $(".wrapper-select").val();
+      let type = document.querySelector(".wrapper-select").value;
       spinner.setAnimation("app", type);
       spinner.show("app", {
         timeout : timer

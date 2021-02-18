@@ -1,0 +1,23 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "noEmit": true,
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false
+  },
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*",
+    "lib/**/*",
+    "dist/**/*",
+    "typings/**"
+  ]
+}

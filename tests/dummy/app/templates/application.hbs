@@ -1,9 +1,10 @@
+
 <div class="wrapper">
   <div class="action-button shadow animate red" {{action "showSpinner"}}>Show Page Spinner</div>
   <select id="soflow" class="wrapper-select">
     <option value="pulse">Select Spinner</option>
-    {{#each types}}
-        <option {{bindAttr value="id" selected="selected"}}>{{label}}</option>
+    {{#each types as |type|}}
+        <option value={{type.id}} selected={{type.selected}}>{{type.label}}</option>
     {{/each}}
   </select>
   <span>Timeout</span>

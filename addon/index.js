@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Service from '@ember/service';
 
-let Spinner = Ember.Service.extend({
+let Spinner = Service.extend({
   spinners : {},
   add : function (spinner) {
     let spinners = this.get("spinners");

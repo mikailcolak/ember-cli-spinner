@@ -1,7 +1,7 @@
 <div class="action-button shadow animate blue" {{action "showBoxSpinner"}}>Show Box Spinner </div>
 <select id="soflow" class="box-select">
-  {{#each types}}
-      <option {{bindAttr value="id" selected="selected"}}>{{label}}</option>
+  {{#each types as |type|}}
+    <option value={{type.id}} selected={{type.selected}}>{{type.label}}</option>
   {{/each}}
 </select>
 <span>Timeout</span>
