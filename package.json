@@ -1,13 +1,21 @@
 {
   "name": "ember-cli-spinner",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "TAJAX Spinners for your Ember.js app.",
+  "demoURL": "http://ajainvivek.github.io/ember-cli-spinner/",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "spinner",
+    "loader",
+    "pre-loader",
+    "ajax-spinner",
+    "ajax-loader",
+    "page-loader",
+    "busy-indicator"
   ],
-  "repository": "",
+  "repository": "https://github.com/ajainvivek/ember-cli-spinner.git",
   "license": "MIT",
-  "author": "",
+  "author": "Ajain Vivek",
   "directories": {
     "doc": "doc",
     "test": "tests"
